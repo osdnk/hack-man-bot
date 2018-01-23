@@ -51,6 +51,7 @@ public class BotParser {
      * Run will keep reading output from the engine.
      * Will either update the bot state or get actions.
      */
+    static int r = 0;
     public void run() {
         while (scan.hasNextLine()) {
             String line = scan.nextLine();

@@ -20,14 +20,11 @@
 package bot;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.Random;
 
-import BFS.BFSSearcher;
-import BFS.PathFinder;
 import move.Move;
-import move.MoveType;
 import player.CharacterType;
+import solution.StepMaker;
 
 /**
  * bot.BotStarter
@@ -56,7 +53,9 @@ public class BotStarter {
 
     public Move doMove(BotState state) {
         Point myPosition = state.getField().getMyPosition();
-        PathFinder pathFinder = new PathFinder(state);
-        return pathFinder.findPath(myPosition);
+        StepMaker stepMaker = new StepMaker(state);
+        return stepMaker.makeStep(myPosition);
+       // PathFinder pathFinder = new PathFinder(state);
+        //return pathFinder.findProperPath(myPosition);
     }
 }

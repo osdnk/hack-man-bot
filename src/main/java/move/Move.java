@@ -28,7 +28,7 @@ package move;
  */
 public class Move {
 
-    private MoveType moveType = MoveType.PASS;
+    public MoveType moveType = MoveType.PASS;
     private Integer bombTicks;
 
     public Move() {}

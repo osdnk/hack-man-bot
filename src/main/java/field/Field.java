@@ -234,10 +234,12 @@ public class Field {
             return false;
         int x = point.x;
         int y = point.y;
+        if (field[x][y].indexOf('E') != -1)
+            return withBugs;
 
         return (field[x][y].equals(".") || field[x][y].equals("B") || field[x][y].indexOf('P')!=-1
                 || field[x][y].indexOf('G')!=-1 || field[x][y].indexOf('C') != -1
-                || (withBugs && field[x][y].indexOf('E') != -1) || (field[x][y].indexOf('S')!=-1));
+                || (field[x][y].indexOf('S')!=-1));
     }
 
 
